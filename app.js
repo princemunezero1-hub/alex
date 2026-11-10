@@ -1,5 +1,5 @@
 // Connect to Public MQTT Broker over WebSockets
-const brokerUrl = 'ws://broker.hivemq.com:8000/mqtt'; 
+const brokerUrl = 'wss://broker.hivemq.com:8884/mqtt';
 
 const client = mqtt.connect(brokerUrl, {
     clientId: 'web_dashboard_' + Math.random().toString(16).substring(2, 8),
