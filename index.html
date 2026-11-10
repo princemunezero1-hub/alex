@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 IoT Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- MQTT JavaScript Library via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>ESP32 Live Sensor Dashboard</h1>
+        <div id="connection-status">Connecting to MQTT Broker...</div>
+
+        <div class="dashboard-grid">
+            <!-- Humidity Card -->
+            <div class="card">
+                <h3>DHT Humidity</h3>
+                <div class="value" id="humidity-val">-- %</div>
+            </div>
+
+            <!-- Potentiometer Card -->
+            <div class="card">
+                <h3>Potentiometer Voltage</h3>
+                <div class="value" id="voltage-val">-- V</div>
+            </div>
+
+            <!-- Red LED Card -->
+            <div class="card">
+                <h3>Red LED State</h3>
+                <div id="red-led-status" class="status-badge badge-off">LOW</div>
+            </div>
+
+            <!-- Green LED Card -->
+            <div class="card">
+                <h3>Green LED State</h3>
+                <div id="green-led-status" class="status-badge badge-off">OFF</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
